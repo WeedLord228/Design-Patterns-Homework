@@ -1,4 +1,4 @@
-package abstractFactoryTask;
+package homework.abstractFactoryTask;
 
 public class BMWWheel extends CarWheel {
     public BMWWheel ()

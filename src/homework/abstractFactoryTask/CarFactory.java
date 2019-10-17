@@ -1,4 +1,4 @@
-package abstractFactoryTask;
+package homework.abstractFactoryTask;
 
 public interface CarFactory {
     CarBody CreateBody();

@@ -1,6 +1,6 @@
-package abstractFactoryTask;
+package homework.abstractFactoryTask;
 
-public abstract class CarBody {
+public abstract class CarTransmisson {
     private String name;
 
     public void setName(String name)

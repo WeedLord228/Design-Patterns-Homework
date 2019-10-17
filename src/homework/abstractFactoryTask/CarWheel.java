@@ -1,7 +1,7 @@
+package homework.abstractFactoryTask;
 
-package abstractFactoryTask;
+public abstract class CarWheel {
 
-public abstract class CarEngine {
     private String name;
 
     public void setName(String name)
@@ -12,5 +12,4 @@ public abstract class CarEngine {
     public String getName() {
         return name;
     }
-
 }
