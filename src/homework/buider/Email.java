@@ -2,38 +2,38 @@ package homework.buider;
 
 import java.util.ArrayList;
 
-public class Email {
+class Email {
     private ArrayList<String> recievers;
     private String content;
     private String topic;
 
-    public Email(ArrayList<String> recievers, String content, String topic) {
+    protected Email(ArrayList<String> recievers, String content, String topic) {
         this.recievers = recievers;
         this.content = content;
         this.topic = topic;
     }
 
-    public ArrayList<String> getRecievers() {
+    protected ArrayList<String> getRecievers() {
         return recievers;
     }
 
-    public void setRecievers(ArrayList<String> recievers) {
+    protected void setRecievers(ArrayList<String> recievers) {
         this.recievers = recievers;
     }
 
-    public String getContent() {
+    protected String getContent() {
         return content;
     }
 
-    public void setContent(String content) {
+    protected void setContent(String content) {
         this.content = content;
     }
 
-    public String getTopic() {
+    protected String getTopic() {
         return topic;
     }
 
-    public void setTopic(String topic) {
+    protected void setTopic(String topic) {
         this.topic = topic;
     }
 

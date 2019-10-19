@@ -2,28 +2,28 @@ package homework.buider;
 
 import java.util.ArrayList;
 
-public class EmailBuilder {
+class EmailBuilder {
     private ArrayList<String> recievers;
     private String content;
     private String topic = "";
 
-    public EmailBuilder(String reciever, String content) {
+    EmailBuilder(String reciever, String content) {
         recievers = new ArrayList<String>();
         recievers.add(reciever);
         this.content = content;
     }
 
-    public EmailBuilder addReciever(String reciever) {
+    EmailBuilder addReciever(String reciever) {
         this.recievers.add(reciever);
         return this;
     }
 
-    public EmailBuilder setTopic(String topic) {
+    EmailBuilder setTopic(String topic) {
         this.topic = topic;
         return this;
     }
 
-    public Email build() {
+    Email build() {
         return new Email(recievers, content, topic);
     }
 

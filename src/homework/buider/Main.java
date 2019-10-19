@@ -1,7 +1,7 @@
 package homework.buider;
 
-public class Main {
-    public static void main(String[] args) {
+class Main {
+    protected static void main(String[] args) {
         EmailBuilder emailBuilder = new EmailBuilder("Паша", "Привет");
         Email emailWithoutTopic = emailBuilder.build();
 
@@ -20,7 +20,7 @@ public class Main {
 
     }
 
-    public static void printEmail(Email email) {
+    protected static void printEmail(Email email) {
         String recievers = "";
         if (email.getRecievers().size() == 1)
             recievers = email.getRecievers().get(0);
