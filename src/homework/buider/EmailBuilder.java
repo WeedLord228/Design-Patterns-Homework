@@ -8,12 +8,7 @@ class EmailBuilder {
     private String content;
 
     private String topic = "";
-//
-//    EmailBuilder(String reciever, String content) {
-//        recievers = new ArrayList<String>();
-//        recievers.add(reciever);
-//        this.content = content;
-//    }
+
     EmailBuilder()
     {
         this.content = "";
