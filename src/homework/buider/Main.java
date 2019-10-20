@@ -2,18 +2,23 @@ package homework.buider;
 
 class Main {
     protected static void main(String[] args) {
-        EmailBuilder emailBuilder = new EmailBuilder("Паша", "Привет");
-        Email emailWithoutTopic = emailBuilder.build();
+        Email emailWithoutTopic = new EmailBuilder()
+                .addReciever("Паша")
+                .setContent("Привет")
+                .build();
+
 
         System.out.println("Письмо без темы с одним получателем:");
         printEmail(emailWithoutTopic);
         System.out.println();
 
-        emailBuilder = new EmailBuilder("Лёша", "Приглашаю на свой день рождения!")
+        Email emailWithTopic = new EmailBuilder()
+                .addReciever("Леша")
                 .addReciever("Миша")
                 .addReciever("Саша")
-                .setTopic("День рождения");
-        Email emailWithTopic = emailBuilder.build();
+                .setTopic("День рождения")
+                .setContent("Приглашаю на свой день рождения!")
+                .build();
 
         System.out.println("Письмо с темой и несколькими получателями:");
         printEmail(emailWithTopic);
