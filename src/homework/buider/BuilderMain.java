@@ -1,7 +1,7 @@
 package homework.buider;
 
-class Main {
-    protected static void main(String[] args) {
+public class BuilderMain {
+    public static void main(String[] args) {
         Email emailWithoutTopic = new EmailBuilder()
                 .addReciever("Паша")
                 .setContent("Привет")
@@ -16,8 +16,8 @@ class Main {
                 .addReciever("Леша")
                 .addReciever("Миша")
                 .addReciever("Саша")
-                .setTopic("День рождения")
                 .setContent("Приглашаю на свой день рождения!")
+                .setTopic("День рождения")
                 .build();
 
         System.out.println("Письмо с темой и несколькими получателями:");
@@ -30,10 +30,10 @@ class Main {
         if (email.getRecievers().size() == 1)
             recievers = email.getRecievers().get(0);
         else for (String r : email.getRecievers())
-            recievers += r;
+            recievers += r + " ";
 
         System.out.println("To: " + recievers);
-        System.out.println();
+        System.out.println(email.getTopic());
         System.out.println(email.getContent());
     }
 }

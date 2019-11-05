@@ -1,6 +1,6 @@
 package homework.abstractFactoryTask;
 
-public class Main {
+public class FactoryMain {
 
     public static void main(String[] args) {
 
