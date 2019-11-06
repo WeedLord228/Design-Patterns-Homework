@@ -7,7 +7,6 @@ public class BuilderMain {
                 .setContent("Привет")
                 .build();
 
-
         System.out.println("Письмо без темы с одним получателем:");
         printEmail(emailWithoutTopic);
         System.out.println();
