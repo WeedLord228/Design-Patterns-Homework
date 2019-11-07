@@ -13,6 +13,12 @@ namespace AdapterTask
         private IFirstOrm<DbUserEntity> _firstOrm1;
         private IFirstOrm<DbUserInfoEntity> _firstOrm2;
 
+        public FirstOrmAdapter(IFirstOrm<DbUserEntity> _firstOrm1,IFirstOrm<DbUserInfoEntity> _firstOrm2 )
+        {
+            this._firstOrm1 = _firstOrm1;
+            this._firstOrm2 = _firstOrm2;
+        }
+
         public void Add(DbUserEntity user, DbUserInfoEntity userInfo)
         {
             _firstOrm1.Add(user);
@@ -39,6 +45,11 @@ namespace AdapterTask
     public class SecondOrmAdapter : IOrmAdapter
     {
         private ISecondOrm _secondOrm;
+
+        public SecondOrmAdapter (ISecondOrm _secondOrm)
+        {
+            this._secondOrm = _secondOrm;
+        } 
 
         public void Add(DbUserEntity user, DbUserInfoEntity userInfo)
         {
@@ -74,11 +85,6 @@ namespace AdapterTask
     public class UserClient
     {
         private IOrmAdapter _ormAdapter;
-
-        private IFirstOrm<DbUserEntity> _firstOrm1;
-        private IFirstOrm<DbUserInfoEntity> _firstOrm2;
-
-        private ISecondOrm _secondOrm;
 
         private bool _useFirstOrm = true;
 
