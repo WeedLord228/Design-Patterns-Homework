@@ -86,8 +86,6 @@ namespace AdapterTask
     {
         private IOrmAdapter _ormAdapter;
 
-        private bool _useFirstOrm = true;
-
         public (DbUserEntity, DbUserInfoEntity) Get(int userId)
         {
             return _ormAdapter.Get(userId);
