@@ -12,6 +12,6 @@ public class DesktopChatClient implements ChatClient {
 
     @Override
     public Message recieveMessage() {
-        return messages.getLast();
+        return messages.poll();
     }
 }
